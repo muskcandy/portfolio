@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Venu Sai Naik Banothu - Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f5f6fa;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    background: linear-gradient(135deg, #eef1f8, #dfe3f0);
+    padding: 90px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hero-left {
+    max-width: 650px;
+}
+
+.intro {
+    color: #6366f1;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.name {
+    font-size: 56px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.role {
+    font-size: 30px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 15px;
+}
+
+.contact-line {
+    display: flex;
+    gap: 25px;
+    font-size: 16px;
+    color: #4b5563;
+    margin-bottom: 25px;
+}
+
+.description {
+    font-size: 17px;
+    color: #4b5563;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.linkedin {
+    background: #2563eb;
+    color: white;
+}
+
+.linkedin:hover {
+    background: #1d4ed8;
+}
+
+.github {
+    background: #1f2937;
+    color: white;
+}
+
+.github:hover {
+    background: #111827;
+}
+
+.email {
+    background: #d4d5d7;
+    color: #111827;
+}
+
+.email:hover {
+    background: #d1d5db;
+}
+
+/* Profile Image */
+
+.hero-right img {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* ================= SECTION TITLE ================= */
+
+.section {
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 52px;
+    margin-bottom: 10px;
+}
+
+.section p {
+    color: #64748b;
+    margin-bottom: 40px;
+}
+
+/* ================= SKILLS ================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card ul {
+    padding-left: 20px;
+    color: #475569;
+}
+
+/* ================= PROJECTS ================= */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.project-content {
+    padding: 20px;
+}
+
+.project-content h3 {
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.tag {
+    display: inline-block;
+    background: #e0e7ff;
+    color: #4338ca;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin: 5px 5px 0 0;
+}
+
+.view-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 14px;
+    background: #6c63ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* ================= EDUCATION ================= */
+/* ================= EDUCATION SECTION ================= */
+
+.education-section {
+    padding: 80px 10%;
+    background: #f3f4f6;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 54px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.edu-card {
+    background: #e7ebf5;
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.edu-card:hover {
+    transform: translateY(-5px);
+}
+
+.edu-icon {
+    min-width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    color: white;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.edu-content h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.college {
+    font-size: 18px;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.edu-meta {
+    font-size: 16px;
+    color: #4b5563;
+    margin-bottom: 5px;
+}
+
+.highlight {
+    color: #4f46e5;
+    font-weight: 600;
+}
+
+.dot {
+    margin: 0 8px;
+}
+
+.location {
+    font-size: 15px;
+    color: #6b7280;
+}
+
+/* Responsive */
+
+@media(max-width: 768px) {
+    .edu-card {
+        flex-direction: column;
+    }
+
+    .edu-icon {
+        margin-bottom: 15px;
+    }
+}
+/* ================= CERTIFICATIONS ================= */
+
+.cert-section {
+    padding: 80px 10%;
+    background: #f3f4f6;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 54px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 50px;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+}
+
+.cert-card {
+    background: #e7ebf5;
+    display: flex;
+    gap: 25px;
+    padding: 35px;
+    border-radius: 22px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-6px);
+}
+
+.cert-icon {
+    min-width: 65px;
+    height: 65px;
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);
+    color: white;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+}
+
+.cert-content h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.cert-org {
+    color: #7c3aed;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.cert-date {
+    color: #4b5563;
+    margin-bottom: 15px;
+}
+
+.cert-desc {
+    color: #374151;
+    line-height: 1.7;
+}
+
+/* Responsive */
+
+@media(max-width: 768px) {
+    .cert-card {
+        flex-direction: column;
+    }
+
+    .cert-icon {
+        margin-bottom: 15px;
+    }
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #0f172a;
+    color: white;
+    padding: 40px 10%;
+    text-align: center;
+}
+
+footer p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img {
+        margin-top: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-left">
+
+        <p class="intro">Hello, I'm</p>
+
+        <h1 class="name">Venu Sai Naik Banothu</h1>
+
+        <h2 class="role">Data Analyst</h2>
+
+        <div class="contact-line">
+            <span>📍 India</span>
+            <span>📞 +91 8331958266</span>
+        </div>
+
+        <p class="description">
+            B.TECH Computer Science Engineer (2025) graduate specialized in 
+            transforming complex datasets into actionable business intelligence.
+            Proficient in SQL, Python (Pandas/NumPy), and Advanced Excel with 
+            proven ability to architect interactive dashboards in Power BI and Tableau.
+            Certified in IBM Prompt Engineering and Deloitte Data Analytics,
+            committed to data integrity and evidence-based decision-making.
+        </p>
+
+        <div class="buttons">
+            <a href="https://www.linkedin.com/in/venu-sai-naik-banothu-32837824a/"
+               target="_blank" 
+               class="btn linkedin">LinkedIn</a>
+
+            <a href="https://github.com/muskcandy"
+               target="_blank" 
+               class="btn github">GitHub</a>
+
+            <a href="mailto:venusainaik.banothu@gmail.com"
+               class="btn email">Email</a>
+        </div>
+
+    </div>
+
+    <div class="hero-right">
+        <img src="profile.jpg" alt="Profile Photo">
+    </div>
+</section>
+
+
+<!-- SKILLS -->
+<section class="section">
+    <h2>Skills & Expertise</h2>
+    <p>A comprehensive set of tools and technologies I use to analyze data and derive meaningful insights.</p>
+
+    <div class="skills-grid">
+        <div class="card">
+            <h3>Programming Languages</h3>
+            <ul>
+                <li>Python</li>
+                <li>SQL</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Libraries & Database</h3>
+            <ul>
+                <li>NumPy</li>
+                <li>Pandas</li>
+                <li>Matplotlib</li>
+                <li>MySQL</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>MS Tools</h3>
+            <ul>
+                <li>MS Excel</li>
+                <li>Power BI</li>
+                <li>PowerPoint</li>
+                <li>Word</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Development Tools</h3>
+            <ul>
+                <li>VS Code</li>
+                <li>Google Colab</li>
+                <li>Jupyter Notebook</li>
+                <li>Power Query</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Data Analysis</h3>
+            <ul>
+                <li>Data Visualization</li>
+                <li>KPI Modeling</li>
+                <li>DAX</li>
+                <li>Tableau</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Soft Skills</h3>
+            <ul>
+                <li>Problem Solving</li>
+                <li>Adaptability</li>
+                <li>Time Management</li>
+                <li>Teamwork</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<!-- PROJECTS -->
+<section class="section">
+    <h2>Featured Projects</h2>
+    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Here are some of my recent data analysis projects showcasing my skills in 
+            data manipulation, visualization, and statistical analysis.
+          </p>
+    <div class="projects">
+
+        <div class="project-card">
+            <img src="project1.png" alt="Project 1">
+            <div class="project-content">
+                <h3>Call Center Based Sales Analysis</h3>
+                <p class="cert-date">January 2026</p>
+                <p>'Developed an Excel-based interactive BI dashboard using Pivot Tables, Power Pivot, slicers, and advanced formulas to analyze operational and sales metrics of a call center dataset. Performed data cleaning, KPI modeling, and business insight generation, improving performance tracking and reporting efficiency.</p>
+                <span class="tag">Excel</span>
+                <span class="tag">Power Query</span>
+                <span class="tag">Pivot Tables</span>
+                <span class="tag">Data Visualization</span>
+                <br>
+                <a href="https://github.com/muskcandy/call-center-sales-data-analysis-on-excel" class="view-btn">View Project</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="project2.png" alt="Project 2">
+            <div class="project-content">
+                <h3>Chocolate Sales Data Analysis</h3>
+                <p class="cert-date">February 2026</p>
+                <p>Developed an interactive Power BI dashboard to analyze chocolate sales data from 2023-2025. Built dynamic KPIs using DAX including total revenue, profit percentage, shipment count, and product performance. Conducted time-series trend analysis (Present Year vs Last Year) to identify seasonal sales patterns and performed product, geographic, and salesperson performance analysis.</p>
+                <span class="tag">Power BI</span>
+                <span class="tag">DAX</span>
+                <span class="tag">KPI Modeling</span>
+                <span class="tag">Time-Series Analysis</span>
+                <br>
+                <a href="https://github.com/muskcandy/chocolate-sales-data-analysis-report-on-power-bi" class="view-btn">View Project</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- EDUCATION -->
+<section class="education-section">
+
+    <h2 class="section-title">Education</h2>
+    <p class="section-subtitle">My academic journey and qualifications</p>
+    <!-- B.Tech -->
+    <div class="edu-card">
+        <div class="edu-icon">🎓</div>
+
+        <div class="edu-content">
+            <h3>B.TECH - Computer Science and Engineering</h3>
+            <p class="college">Swarna Bharathi Institute of Science and Technology</p>
+
+            <p class="edu-meta">
+                JNTUH
+                <span class="dot">•</span>
+                <span class="highlight">CGPA: 7.2</span>
+                <span class="dot">•</span>
+                2021 - 2025
+            </p>
+
+            <p class="location">Khammam, Telangana</p>
+        </div>
+    </div>
+
+    <!-- Intermediate -->
+    <div class="edu-card">
+        <div class="edu-icon">🎓</div>
+
+        <div class="edu-content">
+            <h3>Intermediate - MPC</h3>
+            <p class="college">New Vision Jr College</p>
+
+            <p class="edu-meta">
+                TSBIE
+                <span class="dot">•</span>
+                <span class="highlight">Percentage: 83%</span>
+                <span class="dot">•</span>
+                2019 - 2021
+            </p>
+
+            <p class="location">Khammam, Telangana</p>
+        </div>
+    </div>
+
+    <!-- SSC -->
+    <div class="edu-card">
+        <div class="edu-icon">🎓</div>
+
+        <div class="edu-content">
+            <h3>SSC</h3>
+            <p class="college">New Vision The Concept School</p>
+
+            <p class="edu-meta">
+                Telangana Board
+                <span class="dot">•</span>
+                <span class="highlight">GPA: 9.3</span>
+                <span class="dot">•</span>
+                2018 - 2019
+            </p>
+
+            <p class="location">Khammam, Telangana</p>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- CERTIFICATIONS -->
+<section class="cert-section">
+
+    <h2 class="section-title">Certifications</h2>
+    <p class="section-subtitle">Professional certifications and training programs</p>
+
+    <div class="cert-grid">
+
+        <!-- Certification 1 -->
+        <div class="cert-card">
+            <div class="cert-icon">🏅</div>
+
+            <div class="cert-content">
+                <h3>Mastering Prompt Engineering</h3>
+                <p class="cert-org">IBM Skill Build</p>
+                <p class="cert-date">December 2024</p>
+                <p class="cert-desc">
+                    Completed a two-week immersive program exploring AI tools,
+                    advanced prompting techniques, and real-world applications.
+                </p>
+            </div>
+        </div>
+
+        <!-- Certification 2 -->
+        <div class="cert-card">
+            <div class="cert-icon">🏅</div>
+
+            <div class="cert-content">
+                <h3>Data Analytics Job Simulation</h3>
+                <p class="cert-org">Deloitte Australia on Forage</p>
+                <p class="cert-date">February 2026</p>
+                <p class="cert-desc">
+                    Completed a Deloitte job simulation involving data analysis and
+                    forensic technology. Created dashboards using Tableau and used
+                    Excel to classify data and draw business conclusions.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+    <h3>Let's Connect</h3>
+    <p>© 2026 Venu Sai Naik Banothu. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
